@@ -93,7 +93,7 @@ class App:
         self.add_button = ttk.Button(
             self.root,
             text="Find path",
-            command=self.start_algoritm,
+            command=self.run,
         )
         self.add_button.pack()
 
@@ -211,7 +211,7 @@ class App:
     def get_vertex_coordinates(self, vertex: int) -> tuple:  # получение координат точки
         return (self._vertex[vertex - 1]["x"], self._vertex[vertex - 1]["y"])
 
-    def start_algoritm(self):  # запуск алгоритма
+    def run(self):  # запуск алгоритма
         selected_edge, dist = self._handler(
             len(self._vertex),
             [(e["from"] - 1, e["to"] - 1, float(e["weight"])) for e in self._edge],

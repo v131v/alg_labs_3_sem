@@ -1,6 +1,5 @@
 from typing import List, Tuple, Optional
 import numpy as np
-from typing import Tuple, List
 
 
 def build_distance_matrix(
